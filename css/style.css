@@ -1,6 +1,36 @@
 body{margin:0;font-family:Inter,sans-serif;background:#faf9f7;color:#222}
 nav{display:flex;justify-content:space-between;padding:2rem 8vw;position:sticky;top:0;background:#faf9f7cc;backdrop-filter:blur(8px)}
-.hero{padding:10vh 8vw 6vh}.hero h1{font:700 clamp(2.8rem,7vw,5.5rem) Newsreader,serif;max-width:10ch;line-height:1}
+.intro{
+    padding:5rem 8vw 4rem;
+}
+
+.intro h1{
+    font-family:"Newsreader",serif;
+    font-size:clamp(3rem,7vw,5.8rem);
+    font-weight:700;
+    line-height:.95;
+    margin:0;
+}
+
+.tagline{
+    max-width:650px;
+    margin-top:1.25rem;
+    font-size:1.2rem;
+    line-height:1.7;
+    color:#555;
+}
+.links-bar{
+    margin-top:3rem;
+    background:#111;
+    padding:1rem 8vw;
+}
+
+.links-bar a{
+    color:white;
+    margin-right:2rem;
+    text-decoration:none;
+    font-weight:500;
+}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;padding:0 8vw 5rem}
 .card{text-decoration:none;color:inherit;background:white;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:.25s}
 .card:hover{transform:translateY(-6px)}img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#ddd}.card img:hover{transform:scale(1.03);transition:.3s}.card div{padding:1.2rem}h3{margin:0;font-family:Newsreader,serif;font-size:2rem}
