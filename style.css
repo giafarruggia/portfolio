@@ -153,6 +153,32 @@ a:hover{
     cursor:pointer;
 }
 
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    
+    background:none;
+    border:none;
+    color:white;
+    font-size:3rem;
+    cursor:pointer;
+}
+
+.lightbox-prev{
+    left:2rem;
+}
+
+.lightbox-next{
+    right:2rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+    opacity:.7;
+}
+
 .card{
     text-decoration:none;
     color:inherit;
