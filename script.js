@@ -4,6 +4,7 @@ const lightboxImage = document.getElementById("lightbox-image");
 const closeButton = document.querySelector(".lightbox-close");
 const prevButton = document.querySelector(".lightbox-prev");
 const nextButton = document.querySelector(".lightbox-next");
+const lightboxCaption = document.getElementById("lightbox-caption");
 
 let currentIndex = 0;
 
@@ -23,6 +24,9 @@ if (lightbox && galleryImages.length > 0) {
                 lightbox.style.display = "flex";
                 currentIndex = index;
                 showImage(currentIndex);
+                if (lightboxCaption) {
+    lightboxCaption.textContent = "";
+}
             }
 
         });
@@ -37,6 +41,9 @@ if (lightbox && galleryImages.length > 0) {
             }
 
             showImage(currentIndex);
+            if (lightboxCaption) {
+    lightboxCaption.textContent = "";
+}
         });
     }
 
@@ -49,6 +56,9 @@ if (lightbox && galleryImages.length > 0) {
             }
 
             showImage(currentIndex);
+            if (lightboxCaption) {
+    lightboxCaption.textContent = "";
+}
         });
     }
 
@@ -67,8 +77,12 @@ if (charlieLink && lightbox && lightboxImage) {
             event.preventDefault();
 
             lightbox.style.display = "flex";
-            lightboxImage.src = charlieLink.href;
-            lightboxImage.alt = "Charlie";
+        lightboxImage.src = charlieLink.href;
+        lightboxImage.alt = "Charlie";
+
+        if (lightboxCaption) {
+    lightboxCaption.textContent = "my favorite coworker, charlie 🐈‍⬛";
+}
 
         }
 
