@@ -30,21 +30,18 @@ body{
 }
 
 .bio {
-    margin: 1.75rem 0 .5rem;
-
-    max-width: 900px;
-
-    font-family: "Inter", sans-serif;
-    font-size: .85rem;
-    line-height: 1.8;
-
-    color: #444;
+    margin: 1.75rem 0 0;
+    max-width:900px;
+    font-family:"Inter",sans-serif;
+    font-size:.85rem;
+    line-height:1.5;
+    color:#444;
 }
 
 .links-bar{
     background:#111;
-    padding:1rem 8vw;
-    margin-top:2rem;
+    padding:.75rem 8vw;
+    margin-top:.5rem;
 
     display:flex;
     gap:2rem;
