@@ -43,6 +43,7 @@ body{
     padding:.75rem 8vw;
 
     display:flex;
+    justify-content:center;
     gap:2rem;
     align-items:center;
 }
@@ -79,8 +80,3 @@ body{
 .card img:hover{
     transform:scale(1.03);transition:.3s}
 .card div{padding:1.2rem}h3{margin:0;font-family:Newsreader,serif;font-size:2rem}
-
-
-* {
-    outline: 1px solid red;
-}
