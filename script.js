@@ -76,18 +76,14 @@ if (charlieLink && lightbox && lightboxImage) {
 
     charlieLink.addEventListener("click", (event) => {
 
-        if (window.innerWidth > 700) {
-
-            event.preventDefault();
+        event.preventDefault();
 
         lightbox.style.display = "flex";
         lightboxImage.src = charlieLink.href;
         lightboxImage.alt = "Charlie";
 
         if (lightboxCaption) {
-    lightboxCaption.textContent = "say hello to charlie";
-}
-
+            lightboxCaption.textContent = "say hello to charlie";
         }
 
     });
