@@ -7,6 +7,8 @@ const nextButton = document.querySelector(".lightbox-next");
 
 let currentIndex = 0;
 
+
+// gallery lightbox
 if (lightbox && galleryImages.length > 0) {
 
     function showImage(index){
@@ -26,36 +28,34 @@ if (lightbox && galleryImages.length > 0) {
         });
     });
 
-    nextButton.addEventListener("click", () => {
-        currentIndex++;
+    if (nextButton) {
+        nextButton.addEventListener("click", () => {
+            currentIndex++;
 
-        if(currentIndex >= galleryImages.length){
-            currentIndex = 0;
-        }
+            if(currentIndex >= galleryImages.length){
+                currentIndex = 0;
+            }
 
-        showImage(currentIndex);
-    });
+            showImage(currentIndex);
+        });
+    }
 
-    prevButton.addEventListener("click", () => {
-        currentIndex--;
+    if (prevButton) {
+        prevButton.addEventListener("click", () => {
+            currentIndex--;
 
-        if(currentIndex < 0){
-            currentIndex = galleryImages.length - 1;
-        }
+            if(currentIndex < 0){
+                currentIndex = galleryImages.length - 1;
+            }
 
-        showImage(currentIndex);
-    });
+            showImage(currentIndex);
+        });
+    }
 
-    closeButton.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
+}
 
-    lightbox.addEventListener("click", (event) => {
-        if(event.target === lightbox){
-            lightbox.style.display = "none";
-        }
-    });
 
+// charlie lightbox
 const charlieLink = document.querySelector(".charlie-link");
 
 if (charlieLink && lightbox && lightboxImage) {
@@ -75,8 +75,10 @@ if (charlieLink && lightbox && lightboxImage) {
     });
 
 }
-    
-    const themeToggle = document.getElementById("theme-toggle");
+
+
+// dark mode
+const themeToggle = document.getElementById("theme-toggle");
 
 if(themeToggle){
 
@@ -94,7 +96,5 @@ if(themeToggle){
 
         themeToggle.textContent = darkMode ? "☀" : "☾";
     });
-
-}
 
 }
