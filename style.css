@@ -257,7 +257,7 @@ h3{
 
 .site-footer{
     text-align:center;
-    padding:3rem 8vw;
+    padding:1.5rem 8vw;
     font-family:var(--sans-font);
     font-size:.85rem;
     color:#999;
@@ -274,7 +274,7 @@ h3{
 }
 
 .site-footer p{
-    margin-top:2rem;
+    margin-top:1rem;
     line-height:1.6;
 }
 
