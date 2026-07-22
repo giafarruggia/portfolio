@@ -318,19 +318,19 @@ h3{
     transform:translateY(.1rem) rotate(15deg);
 }
 
-.mobile-theme-toggle{
+.mobile-theme-link{
     display:none;
 }
 
-.theme-switch{
-    position:relative;
-    display:inline-block;
-    width:58px;
-    height:30px;
+.mobile-theme-link a{
+    color:var(--secondary-text);
+    text-decoration:none;
+    font-size:.85rem;
+    text-transform:lowercase;
 }
 
-.theme-switch input{
-    display:none;
+.mobile-theme-link a:hover{
+    color:var(--text);
 }
 
 .slider{
@@ -460,6 +460,15 @@ h3{
 
     .name-row button{
     display:none;
+    }
+
+    .mobile-theme-link{
+    display:block;
+    margin-bottom:1rem;
+    }
+
+    .name-row button{
+    display:block;
     }
 
 }
