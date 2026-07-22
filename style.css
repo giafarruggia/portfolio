@@ -7,8 +7,8 @@
     --bio-text: #444;
     --secondary-text: #666;
     --card-background: white;
-    --nav-background: #111;
-    --nav-text: fff;
+    --nav-background: #181818;
+    --nav-text: f2f2f2;
     --link: #990000;
     --link-hover: #470000;
 }
@@ -19,7 +19,7 @@
     --bio-text: #cccccc;
     --secondary-text: #aaaaaa;
     --card-background: #242424;
-    --nav-background: #eeeeee;
+    --nav-background: #f2f2f2;
     --nav-text: #181818;
     --link: #ffb8b8;
     --link-hover: #ffe6e6;
