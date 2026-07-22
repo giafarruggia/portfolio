@@ -122,25 +122,26 @@ a:hover{
 }
 
 .gallery-nav {
-    display:grid;
-    grid-template-columns:1fr auto 1fr;
-    align-items:center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: .75rem 8vw;
 }
 
 .gallery-nav .nav-left {
-    justify-self:end;
+    justify-self: end;
 }
 
 .gallery-nav .nav-center {
-    justify-self:center;
+    justify-self: center;
 }
 
 .gallery-nav .nav-right {
-    justify-self:start;
+    justify-self: start;
 }
 
-.gallery-nav > div {
-    min-width:0;
+.gallery-nav a {
+    white-space: nowrap;
 }
 
 .gallery-nav a{
@@ -390,10 +391,6 @@ h3{
         display:block;
     }
 
-    .subtitle .divider{
-        display:none;
-    }
-
     .desktop-link{
         display:none;
     }
@@ -404,10 +401,6 @@ h3{
 
     .calendar-gallery{
         grid-template-columns:1fr;
-    }
-
-    .divider{
-        display:none;
     }
 
     .web-gallery{
