@@ -160,6 +160,12 @@ a:hover{
     white-space: nowrap;
 }
 
+.homepage-nav {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    text-align:center;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
