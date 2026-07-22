@@ -103,3 +103,25 @@ if(themeToggle){
     });
 
 }
+
+// close lightbox
+if (closeButton) {
+    closeButton.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+}
+
+if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+}
+
+// escape key
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox) {
+        lightbox.style.display = "none";
+    }
+});
