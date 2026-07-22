@@ -83,7 +83,7 @@ if (charlieLink && lightbox && lightboxImage) {
         lightboxImage.alt = "Charlie";
 
         if (lightboxCaption) {
-            lightboxCaption.textContent = "say hello to charlie";
+            lightboxCaption.textContent = "say hello to Charlie!";
         }
 
     });
