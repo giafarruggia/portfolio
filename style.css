@@ -1,13 +1,29 @@
 :root {
     --serif-font: "Merriweather", serif;
     --sans-font: "Open Sans", sans-serif;
+
+    --background: #f2f2f2;
+    --text: #222;
+    --bio-text: #444;
+    --secondary-text: #666;
+    --card-background: white;
+    --nav-background: #111;
+}
+
+.dark-mode {
+    --background: #181818;
+    --text: #eeeeee;
+    --bio-text: #cccccc;
+    --secondary-text: #aaaaaa;
+    --card-background: #242424;
+    --nav-background: #080808;
 }
 
 body{
     margin:0;
     font-family:var(--sans-font);
-    background:#f2f2f2;
-    color:#222
+    background:var(--background);
+    color:var(--text);
 }
 
 .intro{
@@ -56,7 +72,7 @@ body{
     font-family:var(--sans-font);
     font-size:1rem;
     line-height:1.5;
-    color:#444;
+    color:var(--bio-text);
 }
 
 .gallery-page .bio{
@@ -73,7 +89,7 @@ a:hover{
 }
 
 .links-bar{
-    background:#111;
+    background:var(--nav-background);
     padding:.75rem 8vw;
 
     color:white;
@@ -211,7 +227,7 @@ a:hover{
     transition:.25s ease;
     text-decoration:none;
     color:inherit;
-    background:white;
+    background:var(--card-background);
     border-radius:16px;
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.06);
@@ -254,6 +270,26 @@ h3{
 
 .mobile-link{
     display:none;
+}
+
+.name-row{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+}
+
+#theme-toggle{
+    border:none;
+    background:none;
+    font-size:1.5rem;
+    cursor:pointer;
+    color:var(--text);
+    padding:0;
+    line-height:1;
+}
+
+#theme-toggle:hover{
+    opacity:.6;
 }
 
 .site-footer{
