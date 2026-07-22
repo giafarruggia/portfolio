@@ -239,6 +239,14 @@ a:hover{
     object-fit:contain;
 }
 
+.lightbox-caption{
+    color:white;
+    font-family:var(--sans-font);
+    text-align:center;
+    font-size:.9rem;
+    margin-top:1rem;
+}
+
 .card{
     opacity:.65;
     transition:.25s ease;
