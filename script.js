@@ -95,7 +95,25 @@ if (charlieLink && lightbox && lightboxImage) {
 
 // dark mode
 
+const themeToggle = document.getElementById("theme-toggle");
+const mobileToggle = document.getElementById("theme-toggle-mobile");
+
+function setTheme(isDark) {
+
+    if (isDark) {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+
+    localStorage.setItem("dark-mode", isDark);
+
+    updateThemeControls();
+}
+
+
 function updateThemeControls() {
+
     const darkMode = document.body.classList.contains("dark-mode");
 
     if (themeToggle) {
@@ -105,44 +123,54 @@ function updateThemeControls() {
     if (mobileToggle) {
         mobileToggle.textContent = darkMode ? "☀ light mode" : "☾ dark mode";
     }
+
 }
 
-updateThemeControls();
 
-function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+// check saved preference first
+const savedTheme = localStorage.getItem("dark-mode");
 
-    const darkMode = document.body.classList.contains("dark-mode");
+if (savedTheme !== null) {
 
-    localStorage.setItem("dark-mode", darkMode);
+    setTheme(savedTheme === "true");
 
-    updateThemeControls();
+} else {
+
+    // otherwise follow device setting
+    const deviceDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    setTheme(deviceDarkMode);
+
 }
 
+
+// desktop button
 if (themeToggle) {
-    themeToggle.addEventListener("click", toggleTheme);
+
+    themeToggle.addEventListener("click", () => {
+
+        const currentlyDark = document.body.classList.contains("dark-mode");
+
+        setTheme(!currentlyDark);
+
+    });
+
 }
 
+
+// mobile link
 if (mobileToggle) {
+
     mobileToggle.addEventListener("click", (event) => {
+
         event.preventDefault();
-        toggleTheme();
-    });
-}
 
-// close lightbox
-if (closeButton) {
-    closeButton.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
-}
+        const currentlyDark = document.body.classList.contains("dark-mode");
 
-if (lightbox) {
-    lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-            lightbox.style.display = "none";
-        }
+        setTheme(!currentlyDark);
+
     });
+
 }
 
 // escape key
