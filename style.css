@@ -111,6 +111,6 @@ body{
     }
 
     .headshot{
-        width:200px;
+        display:none;
     }
 }
