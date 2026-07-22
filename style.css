@@ -124,6 +124,7 @@ a:hover{
 
 .gallery-nav .nav-left {
     justify-self:end;
+    padding-right:2rem;
 }
 
 .gallery-nav .nav-center {
@@ -132,6 +133,7 @@ a:hover{
 
 .gallery-nav .nav-right {
     justify-self:start;
+    padding-left:2rem;
 }
 
 .grid{
@@ -415,10 +417,11 @@ h3{
         display:none;
     }
 
-    .gallery-nav {
+.gallery-nav {
     display:flex;
     justify-content:center;
-    gap:2rem;
+    gap:1.5rem;
+    padding:.75rem 5vw;
 }
 
 .gallery-nav .nav-left,
