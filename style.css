@@ -8,6 +8,7 @@
     --secondary-text: #666;
     --card-background: white;
     --nav-background: #111;
+    --nav-text: fff;
     --link: #990000;
     --link-hover: #470000;
 }
@@ -18,7 +19,8 @@
     --bio-text: #cccccc;
     --secondary-text: #aaaaaa;
     --card-background: #242424;
-    --nav-background: #080808;
+    --nav-background: #eeeeee;
+    --nav-text: #181818;
     --link: #ffb8b8;
     --link-hover: #ffe6e6;
 }
@@ -109,12 +111,11 @@ a:hover{
     background:var(--nav-background);
     padding:.75rem 8vw;
 
-    color:white;
+    color:var(--nav-text);
     text-transform: uppercase;
-    text-decoration:none;
     font-weight:500;
     letter-spacing:.02em;
-    
+
     display:flex;
     justify-content:center;
     gap:2rem;
@@ -122,8 +123,8 @@ a:hover{
 }
 
 .links-bar a{
-    color:white;
-    text-transform: uppercase;
+    color:var(--nav-text);
+    text-transform:uppercase;
     text-decoration:none;
     font-weight:500;
     letter-spacing:.02em;
