@@ -437,6 +437,11 @@ h3{
         display:inline;
     }
 
+    .homepage-nav {
+        display:flex;
+        justify-content:space-between;
+    }
+
     .divider{
         display:none;
     }
