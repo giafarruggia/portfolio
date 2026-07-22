@@ -290,6 +290,7 @@ h3{
 }
 
 @media (max-width:700px){
+
     .intro{
         flex-direction:column;
         align-items:flex-start;
@@ -316,25 +317,29 @@ h3{
     }
 
     .calendar-gallery{
-    grid-template-columns:1fr;
+        grid-template-columns:1fr;
     }
 
     .divider{
-    display:none;
+        display:none;
     }
 
     .web-gallery{
-    grid-template-columns:1fr;
-    }
-    
-    .card{
-        opacity:.65;
-        transition:.25s ease;
+        grid-template-columns:1fr;
     }
 
-    .card:hover{
-        opacity:1;
-        transform:translateY(-6px);
+    body{
+        animation:none;
     }
-}
+
+    .card{
+        opacity:1;
+    }
+
+    .gallery img:hover,
+    .card:hover{
+        transform:none;
+        opacity:1;
+    }
+
 }
