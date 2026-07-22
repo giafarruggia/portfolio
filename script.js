@@ -205,9 +205,24 @@ if (lightbox) {
     });
 }
 
-// press escape
+// press escape + arrow keys
 document.addEventListener("keydown", (event) => {
+
+    if (!lightbox || lightbox.style.display !== "flex") {
+        return;
+    }
+
     if (event.key === "Escape") {
         closeLightbox();
     }
+
+    if (event.key === "ArrowRight" && nextButton && nextButton.style.display !== "none") {
+        nextButton.click();
+    }
+
+    if (event.key === "ArrowLeft" && prevButton && prevButton.style.display !== "none") {
+        prevButton.click();
+    }
+
+});
 });
