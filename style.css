@@ -40,8 +40,7 @@ body{
 
 .links-bar{
     background:#111;
-    padding:.75rem 8vw;
-    margin-top:.5rem;
+    padding:.75rem 2vw;
 
     display:flex;
     gap:2rem;
