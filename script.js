@@ -86,13 +86,11 @@ if (localStorage.getItem("dark-mode") === "true") {
 }
 
 if (themeToggle) {
-    themeToggle.textContent =
-        document.body.classList.contains("dark-mode") ? "☀" : "☾";
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀" : "☾";
 }
 
 if (mobileToggle) {
-    mobileToggle.checked =
-        document.body.classList.contains("dark-mode");
+    mobileToggle.checked = document.body.classList.contains("dark-mode");
 }
 
 function toggleTheme() {
@@ -113,8 +111,13 @@ function toggleTheme() {
 
 }
 
-themeToggle?.addEventListener("click", toggleTheme);
-mobileToggle?.addEventListener("change", toggleTheme);
+if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
+}
+
+if (mobileToggle) {
+    mobileToggle.addEventListener("change", toggleTheme);
+}
 
 // close lightbox
 if (closeButton) {
