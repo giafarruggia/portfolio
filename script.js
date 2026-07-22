@@ -81,7 +81,7 @@ if (charlieLink && lightbox && lightboxImage) {
         lightboxImage.alt = "Charlie";
 
         if (lightboxCaption) {
-    lightboxCaption.textContent = "my favorite coworker, charlie 🐈‍⬛";
+    lightboxCaption.textContent = "say hello to charlie";
 }
 
         }
