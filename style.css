@@ -17,6 +17,30 @@ body{
     margin:0;
 }
 
+.subtitle {
+    margin-top: 1rem;
+
+    font-family: "Inter", sans-serif;
+    font-size: .95rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: #666;
+}
+
+.bio {
+    margin-top: 1.75rem;
+
+    max-width: 700px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    color: #444;
+}
+
 .tagline{
     max-width:700px;
     margin-top:.75rem;
