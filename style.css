@@ -113,4 +113,12 @@ body{
     .headshot{
         display:none;
     }
+
+    .subtitle span{
+        display:block;
+    }
+
+    .subtitle .divider{
+        display:none;
+    }
 }
