@@ -56,20 +56,23 @@ if (lightbox && galleryImages.length > 0) {
         }
     });
 
-    const charlieLink = document.querySelector(".charlie-link");
+const charlieLink = document.querySelector(".charlie-link");
 
 if (charlieLink) {
 
     charlieLink.addEventListener("click", (event) => {
 
         if (window.innerWidth > 700) {
+
             event.preventDefault();
+
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
 
             lightbox.style.display = "flex";
             lightboxImage.src = charlieLink.href;
             lightboxImage.alt = "Charlie";
-        } else {
-            charlieLink.target = "_blank";
+
         }
 
     });
