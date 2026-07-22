@@ -129,7 +129,7 @@ function updateThemeControls() {
     const darkMode = document.body.classList.contains("dark-mode");
 
     if (themeToggle) {
-        themeToggle.textContent = darkMode ? "☀️" : "🌙";
+        themeToggle.textContent = darkMode ? "☀" : "☾";
     }
 
     if (mobileToggle) {
