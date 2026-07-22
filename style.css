@@ -106,6 +106,21 @@ a:hover{
     padding:1.5rem 8vw 5rem
 }
 
+.masonry{
+    columns:3 320px;
+    column-gap:2rem;
+    padding:1.5rem 8vw 5rem;
+}
+
+.masonry img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:2rem;
+    break-inside:avoid;
+    border-radius:12px;
+}
+
 .card{
     text-decoration:none;
     color:inherit;
