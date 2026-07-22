@@ -61,7 +61,7 @@ body{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:2rem;
-    padding:3rem 8vw 5rem
+    padding:2rem 8vw 5rem
 }
 
 .card{
