@@ -299,6 +299,50 @@ h3{
     transform:translateY(.1rem) rotate(15deg);
 }
 
+.mobile-theme-toggle{
+    display:none;
+}
+
+.theme-switch{
+    position:relative;
+    display:inline-block;
+    width:42px;
+    height:24px;
+}
+
+.theme-switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#bbb;
+    border-radius:999px;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.slider::before{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    left:3px;
+    top:3px;
+    background:white;
+    border-radius:50%;
+    transition:.25s;
+}
+
+.theme-switch input:checked + .slider{
+    background:#666;
+}
+
+.theme-switch input:checked + .slider::before{
+    transform:translateX(18px);
+}
+
 .site-footer{
     text-align:center;
     padding:1.5rem 8vw;
