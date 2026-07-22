@@ -153,30 +153,35 @@ a:hover{
     cursor:pointer;
 }
 
+.lightbox-content{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    max-width:90vw;
+    max-height:90vh;
+}
+
 .lightbox-prev,
 .lightbox-next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    
     background:none;
     border:none;
     color:white;
     font-size:3rem;
     cursor:pointer;
-}
-
-.lightbox-prev{
-    left:2rem;
-}
-
-.lightbox-next{
-    right:2rem;
+    flex-shrink:0;
 }
 
 .lightbox-prev:hover,
 .lightbox-next:hover{
     opacity:.7;
+}
+
+.lightbox-image{
+    max-width:80vw;
+    max-height:80vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
 }
 
 .card{
