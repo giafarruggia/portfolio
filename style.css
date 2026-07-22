@@ -32,6 +32,11 @@ body{
     color:var(--text);
 }
 
+strong,
+b {
+    color: var(--link);
+}
+
 .intro{
     padding:5rem 8vw 1rem;
     display:flex;
