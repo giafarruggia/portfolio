@@ -182,27 +182,30 @@ if (mobileToggle) {
 }
 
 // close lightbox
+
 function closeLightbox() {
     if (lightbox) {
         lightbox.style.display = "none";
     }
 }
 
-// X button
+// click X
 if (closeButton) {
     closeButton.addEventListener("click", closeLightbox);
 }
 
-// click outside image/content
+// click outside
 if (lightbox) {
     lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
+
+        if (!event.target.closest(".lightbox-content")) {
             closeLightbox();
         }
+
     });
 }
 
-// escape key
+// press escape
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
         closeLightbox();
