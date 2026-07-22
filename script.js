@@ -26,6 +26,13 @@ function showImage(index){
 
             if (window.innerWidth > 700) {
                 lightbox.style.display = "flex";
+                if (prevButton) {
+    prevButton.style.display = "block";
+}
+
+if (nextButton) {
+    nextButton.style.display = "block";
+}
                 currentIndex = index;
                 showImage(currentIndex);
                 if (lightboxCaption) {
@@ -83,7 +90,15 @@ if (charlieLink && lightbox && lightboxImage) {
         lightboxImage.alt = "Charlie";
 
         if (lightboxCaption) {
-            lightboxCaption.textContent = "say hello to Charlie!";
+            lightboxCaption.textContent = "say hello to charlie";
+        }
+
+        if (prevButton) {
+            prevButton.style.display = "none";
+        }
+
+        if (nextButton) {
+            nextButton.style.display = "none";
         }
 
     });
@@ -166,15 +181,30 @@ if (mobileToggle) {
 
 }
 
-// escape key
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && lightbox) {
+// close lightbox
+function closeLightbox() {
+    if (lightbox) {
         lightbox.style.display = "none";
     }
+}
 
+// X button
 if (closeButton) {
-    closeButton.addEventListener("click", () => {
-        lightbox.style.display = "none";
+    closeButton.addEventListener("click", closeLightbox);
+}
+
+// click outside image/content
+if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
     });
 }
+
+// escape key
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
 });
