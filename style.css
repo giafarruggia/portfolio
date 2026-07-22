@@ -106,19 +106,24 @@ a:hover{
     padding:1.5rem 8vw 5rem
 }
 
-.masonry{
-    columns:3 320px;
-    column-gap:2rem;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:2rem;
     padding:1.5rem 8vw 5rem;
 }
 
-.masonry img{
+.gallery img{
     width:100%;
     height:auto;
     display:block;
-    margin-bottom:2rem;
-    break-inside:avoid;
     border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    transition:transform .2s ease;
+}
+
+.gallery img:hover{
+    transform:translateY(-4px);
 }
 
 .card{
