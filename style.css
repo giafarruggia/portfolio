@@ -13,6 +13,14 @@ body{
     gap:3rem;
 }
 
+.intro h1{
+    font-family:"Newsreader",serif;
+    font-size:clamp(3rem,7vw,5.8rem);
+    font-weight:700;
+    line-height:.95;
+    margin:0;
+}
+
 .intro-text{
     flex:1;
 }
