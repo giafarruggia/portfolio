@@ -101,8 +101,10 @@ function setTheme(isDark) {
 
     if (isDark) {
         document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
     } else {
         document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
     }
 
     localStorage.setItem("dark-mode", isDark);
@@ -126,7 +128,6 @@ function updateThemeControls() {
 }
 
 
-// check saved preference first
 const savedTheme = localStorage.getItem("dark-mode");
 
 if (savedTheme !== null) {
@@ -135,7 +136,6 @@ if (savedTheme !== null) {
 
 } else {
 
-    // otherwise follow device setting
     const deviceDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     setTheme(deviceDarkMode);
@@ -143,7 +143,6 @@ if (savedTheme !== null) {
 }
 
 
-// desktop button
 if (themeToggle) {
 
     themeToggle.addEventListener("click", () => {
@@ -157,7 +156,6 @@ if (themeToggle) {
 }
 
 
-// mobile link
 if (mobileToggle) {
 
     mobileToggle.addEventListener("click", (event) => {
