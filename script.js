@@ -7,54 +7,56 @@ const nextButton = document.querySelector(".lightbox-next");
 
 let currentIndex = 0;
 
-function showImage(index){
-    lightboxImage.src = galleryImages[index].src;
-    lightboxImage.alt = galleryImages[index].alt;
-}
+if (lightbox && galleryImages.length > 0) {
 
-galleryImages.forEach((image, index) => {
-    image.addEventListener("click", () => {
+    function showImage(index){
+        lightboxImage.src = galleryImages[index].src;
+        lightboxImage.alt = galleryImages[index].alt;
+    }
 
-        if (window.innerWidth > 700) {
-            lightbox.style.display = "flex";
-            currentIndex = index;
-            showImage(currentIndex);
+    galleryImages.forEach((image, index) => {
+        image.addEventListener("click", () => {
+
+            if (window.innerWidth > 700) {
+                lightbox.style.display = "flex";
+                currentIndex = index;
+                showImage(currentIndex);
+            }
+
+        });
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentIndex++;
+
+        if(currentIndex >= galleryImages.length){
+            currentIndex = 0;
         }
 
+        showImage(currentIndex);
     });
-});
 
-nextButton.addEventListener("click", () => {
-    currentIndex++;
+    prevButton.addEventListener("click", () => {
+        currentIndex--;
 
-    if(currentIndex >= galleryImages.length){
-        currentIndex = 0;
-    }
+        if(currentIndex < 0){
+            currentIndex = galleryImages.length - 1;
+        }
 
-    showImage(currentIndex);
-});
+        showImage(currentIndex);
+    });
 
-prevButton.addEventListener("click", () => {
-    currentIndex--;
-
-    if(currentIndex < 0){
-        currentIndex = galleryImages.length - 1;
-    }
-
-    showImage(currentIndex);
-});
-
-closeButton.addEventListener("click", () => {
-    lightbox.style.display = "none";
-});
-
-lightbox.addEventListener("click", (event) => {
-    if(event.target === lightbox){
+    closeButton.addEventListener("click", () => {
         lightbox.style.display = "none";
-    }
-});
+    });
 
-const themeToggle = document.getElementById("theme-toggle");
+    lightbox.addEventListener("click", (event) => {
+        if(event.target === lightbox){
+            lightbox.style.display = "none";
+        }
+    });
+
+    const themeToggle = document.getElementById("theme-toggle");
 
 if(themeToggle){
 
@@ -72,5 +74,7 @@ if(themeToggle){
 
         themeToggle.textContent = darkMode ? "☀" : "☾";
     });
+
+}
 
 }
