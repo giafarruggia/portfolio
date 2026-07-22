@@ -23,6 +23,19 @@
     --link-hover: #ffe6e6;
 }
 
+@media (prefers-color-scheme: dark){
+    :root{
+        --background: #181818;
+        --text: #eeeeee;
+        --bio-text: #cccccc;
+        --secondary-text: #aaaaaa;
+        --card-background: #242424;
+        --nav-background: #080808;
+        --link: #ffb8b8;
+        --link-hover: #ffe6e6;
+    }
+}
+
 body{
     margin:0;
     font-family:var(--sans-font);
@@ -358,7 +371,7 @@ h3{
 }
 
 .site-footer a:hover{
-    color:#666;
+    color:var(--text);
 }
 
 .site-footer p{
