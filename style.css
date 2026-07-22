@@ -42,7 +42,7 @@ body{
     margin: 1rem 0 0;
 
     font-family:var(--sans-font);
-    font-size: .95rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .18em;
     text-transform: uppercase;
