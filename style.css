@@ -104,9 +104,8 @@ a:hover{
     letter-spacing:.02em;
 
     display:flex;
-    justify-content:center;
-    gap:2rem;
     align-items:center;
+    justify-content:center;
 }
 
 .links-bar a{
@@ -137,6 +136,10 @@ a:hover{
 
 .gallery-nav .nav-right {
     justify-self:start;
+}
+
+.gallery-nav a{
+    white-space:nowrap;
 }
 
 .gallery-nav a{
@@ -423,21 +426,5 @@ h3{
     .name-row button{
         display:none;
     }
-
-.gallery-nav {
-    display:flex;
-    justify-content:center;
-    gap:1.5rem;
-    padding:.75rem 5vw;
-}
-
-.gallery-nav .nav-left,
-.gallery-nav .nav-right {
-    flex:0 0 auto;
-}
-
-.gallery-nav .nav-center {
-    flex:0 0 auto;
-}
 
 }
