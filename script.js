@@ -56,6 +56,26 @@ if (lightbox && galleryImages.length > 0) {
         }
     });
 
+    const charlieLink = document.querySelector(".charlie-link");
+
+if (charlieLink) {
+
+    charlieLink.addEventListener("click", (event) => {
+
+        if (window.innerWidth > 700) {
+            event.preventDefault();
+
+            lightbox.style.display = "flex";
+            lightboxImage.src = charlieLink.href;
+            lightboxImage.alt = "Charlie";
+        } else {
+            charlieLink.target = "_blank";
+        }
+
+    });
+
+}
+
     const themeToggle = document.getElementById("theme-toggle");
 
 if(themeToggle){
