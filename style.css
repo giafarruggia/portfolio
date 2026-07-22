@@ -38,6 +38,13 @@ body{
     color:#444;
 }
 
+.headshot{
+    width:300px;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:12px;
+}
+
 .links-bar{
     background:#111;
     padding:.75rem 8vw;
