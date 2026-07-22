@@ -143,6 +143,10 @@ a:hover{
     grid-template-columns:repeat(2, 1fr);
 }
 
+.web-gallery{
+    grid-template-columns:repeat(3, 1fr);
+}
+
 .lightbox{
     display:none;
     position:fixed;
@@ -281,4 +285,8 @@ h3{
     .divider{
     display:none;
     }
+
+    .web-gallery{
+    grid-template-columns:1fr;
+}
 }
