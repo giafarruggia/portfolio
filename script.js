@@ -95,9 +95,6 @@ if (charlieLink && lightbox && lightboxImage) {
 
 // dark mode
 
-const themeToggle = document.getElementById("theme-toggle");
-const mobileToggle = document.getElementById("theme-toggle-mobile");
-
 function setTheme(isDark) {
 
     if (isDark) {
