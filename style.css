@@ -107,7 +107,23 @@ body{
     transform:translateY(-6px)}img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#ddd}
 .card img:hover{
     transform:scale(1.03);transition:.3s}
-.card div{padding:1.2rem}h3{margin:0;font-family:var(--serif-font);font-size:2rem}
+.card div{
+    padding:1.2rem
+}
+
+h3{
+    margin:0;
+    font-family:var(--serif-font);
+    font-size:2rem;
+}
+
+.desktop-link{
+    display:inline;
+}
+
+.mobile-link{
+    display:none;
+}
 
 @media (max-width:700px){
     .intro{
