@@ -71,6 +71,10 @@ b {
     align-items:flex-start;
 }
 
+.bio{
+    flex:1;
+}
+
 .subtitle {
     margin-top:1.75rem;
 
