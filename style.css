@@ -8,6 +8,8 @@
     --secondary-text: #666;
     --card-background: white;
     --nav-background: #111;
+    --link: #990000;
+    --link-hover: #470000;
 }
 
 .dark-mode {
@@ -17,6 +19,8 @@
     --secondary-text: #aaaaaa;
     --card-background: #242424;
     --nav-background: #080808;
+    --link: #ffb8b8;
+    --link-hover: #ffe6e6;
 }
 
 body{
@@ -81,11 +85,11 @@ body{
 }
 
 a{
-    color:#990000;
+    color:var(--link);
 }
 
 a:hover{
-    color:#470000;
+    color:var(--link-hover);
 }
 
 .links-bar{
