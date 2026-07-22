@@ -5,6 +5,8 @@ const closeButton = document.querySelector(".lightbox-close");
 const prevButton = document.querySelector(".lightbox-prev");
 const nextButton = document.querySelector(".lightbox-next");
 const lightboxCaption = document.getElementById("lightbox-caption");
+const themeToggle = document.getElementById("theme-toggle");
+const mobileToggle = document.getElementById("theme-toggle-mobile");
 
 let currentIndex = 0;
 
@@ -92,8 +94,6 @@ if (charlieLink && lightbox && lightboxImage) {
 
 
 // dark mode
-const themeToggle = document.getElementById("theme-toggle");
-const mobileToggle = document.getElementById("theme-toggle-mobile");
 
 function updateThemeControls() {
     const darkMode = document.body.classList.contains("dark-mode");
@@ -103,12 +103,8 @@ function updateThemeControls() {
     }
 
     if (mobileToggle) {
-        mobileToggle.checked = darkMode;
+        mobileToggle.textContent = darkMode ? "☀ light mode" : "☾ dark mode";
     }
-}
-
-if (localStorage.getItem("dark-mode") === "true") {
-    document.body.classList.add("dark-mode");
 }
 
 updateThemeControls();
@@ -128,7 +124,10 @@ if (themeToggle) {
 }
 
 if (mobileToggle) {
-    mobileToggle.addEventListener("change", toggleTheme);
+    mobileToggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        toggleTheme();
+    });
 }
 
 // close lightbox
