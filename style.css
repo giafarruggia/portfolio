@@ -122,16 +122,11 @@ a:hover{
 }
 
 .gallery-nav{
-    justify-content:flex-start;
+    justify-content:center;
 }
 
 .gallery-nav a:first-child{
-    width:4rem;
-    flex-shrink:0;
-}
-
-.gallery-nav .divider{
-    margin-left:0;
+    margin-right:0;
 }
 .grid{
     display:grid;
