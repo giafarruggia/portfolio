@@ -265,4 +265,8 @@ h3{
     .calendar-gallery{
     grid-template-columns:1fr;
     }
+
+    .divider{
+    display:none;
+    }
 }
