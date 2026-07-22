@@ -59,6 +59,10 @@ body{
     color:#444;
 }
 
+.calendar-gallery{
+    grid-template-columns:repeat(2, 1fr);
+}
+
 .gallery-page .bio{
     margin-top:2.5rem;
     max-width:800px;
@@ -247,5 +251,9 @@ h3{
 
     .mobile-link{
         display:inline;
+    }
+
+    .calendar-gallery{
+    grid-template-columns:1fr;
     }
 }
