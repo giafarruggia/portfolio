@@ -121,13 +121,24 @@ a:hover{
     opacity:.7;
 }
 
-.gallery-nav{
-    justify-content:center;
+.gallery-nav {
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
 }
 
-.gallery-nav a:first-child{
-    margin-right:0;
+.gallery-nav .nav-left {
+    justify-self:end;
 }
+
+.gallery-nav .nav-center {
+    justify-self:center;
+}
+
+.gallery-nav .nav-right {
+    justify-self:start;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
