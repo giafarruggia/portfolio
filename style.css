@@ -32,10 +32,10 @@ body{
 .bio {
     margin-top: 1.75rem;
 
-    max-width: 700px;
+    max-width: 900px;
 
     font-family: "Inter", sans-serif;
-    font-size: 1.1rem;
+    font-size: .75rem;
     line-height: 1.8;
 
     color: #444;
