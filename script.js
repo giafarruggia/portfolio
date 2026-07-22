@@ -14,10 +14,12 @@ let currentIndex = 0;
 // gallery lightbox
 if (lightbox && galleryImages.length > 0) {
 
-    function showImage(index){
-        lightboxImage.src = galleryImages[index].src;
-        lightboxImage.alt = galleryImages[index].alt;
-    }
+function showImage(index){
+    if (!lightboxImage) return;
+
+    lightboxImage.src = galleryImages[index].src;
+    lightboxImage.alt = galleryImages[index].alt;
+}
 
     galleryImages.forEach((image, index) => {
         image.addEventListener("click", () => {
@@ -78,7 +80,7 @@ if (charlieLink && lightbox && lightboxImage) {
 
             event.preventDefault();
 
-            lightbox.style.display = "flex";
+        lightbox.style.display = "flex";
         lightboxImage.src = charlieLink.href;
         lightboxImage.alt = "Charlie";
 
@@ -175,4 +177,10 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && lightbox) {
         lightbox.style.display = "none";
     }
+
+if (closeButton) {
+    closeButton.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+}
 });
