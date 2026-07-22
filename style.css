@@ -139,6 +139,10 @@ a:hover{
     justify-self:start;
 }
 
+.gallery-nav a{
+    white-space:nowrap;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
