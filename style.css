@@ -65,6 +65,12 @@ b {
     flex-shrink:0;
 }
 
+.bio-wrapper{
+    display:flex;
+    gap:2rem;
+    align-items:flex-start;
+}
+
 .subtitle {
     margin-top:1.75rem;
 
@@ -392,11 +398,15 @@ h3{
         align-items:flex-start;
     }
     
+    .bio-wrapper{
+        display:block;
+    }
+
     .headshot{
         width:90px;
         height:90px;
         float:right;
-        margin:0.25rem 0 0.5rem 1rem;
+        margin:0 0 .75rem 1rem;
     }
 
    .subtitle span:not(.divider){
