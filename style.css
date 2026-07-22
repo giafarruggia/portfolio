@@ -79,9 +79,6 @@ body{
     font-size:1rem;
     line-height:1.5;
     color:var(--bio-text);
-
-    border-left:3px solid var(--secondary-text);
-    padding-left:1.5rem;
 }
 
 .gallery-page .bio{
@@ -372,6 +369,15 @@ h3{
     line-height:1.6;
 }
 
+@media (min-width:701px){
+
+    .bio{
+        border-left:3px solid var(--secondary-text);
+        padding-left:1.5rem;
+    }
+
+}
+
 @media (max-width:700px){
 
     .intro{
@@ -389,10 +395,6 @@ h3{
 
     .subtitle .divider{
         display:none;
-    }
-
-    .bio{
-        margin-left:0;
     }
 
     .desktop-link{
