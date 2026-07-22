@@ -7,14 +7,22 @@ body{
 
 .intro{
     padding:5rem 8vw 1rem;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:3rem;
 }
 
-.intro h1{
-    font-family:"Newsreader",serif;
-    font-size:clamp(3rem,7vw,5.8rem);
-    font-weight:700;
-    line-height:.95;
-    margin:0;
+.intro-text{
+    flex:1;
+}
+
+.headshot{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
 }
 
 .subtitle {
@@ -36,13 +44,6 @@ body{
     font-size:.85rem;
     line-height:1.5;
     color:#444;
-}
-
-.headshot{
-    width:300px;
-    aspect-ratio:4/5;
-    object-fit:cover;
-    border-radius:12px;
 }
 
 .links-bar{
