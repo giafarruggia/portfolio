@@ -53,3 +53,24 @@ lightbox.addEventListener("click", (event) => {
         lightbox.style.display = "none";
     }
 });
+
+const themeToggle = document.getElementById("theme-toggle");
+
+if(themeToggle){
+
+    if(localStorage.getItem("dark-mode") === "true"){
+        document.body.classList.add("dark-mode");
+        themeToggle.textContent = "☀";
+    }
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        const darkMode = document.body.classList.contains("dark-mode");
+
+        localStorage.setItem("dark-mode", darkMode);
+
+        themeToggle.textContent = darkMode ? "☀" : "☾";
+    });
+
+}
