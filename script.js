@@ -80,14 +80,18 @@ if (charlieLink && lightbox && lightboxImage) {
 // dark mode
 const themeToggle = document.getElementById("theme-toggle");
 
-if(themeToggle){
+if (localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
 
-    if(localStorage.getItem("dark-mode") === "true"){
-        document.body.classList.add("dark-mode");
+    if (themeToggle) {
         themeToggle.textContent = "☀";
     }
+}
+
+if(themeToggle){
 
     themeToggle.addEventListener("click", () => {
+
         document.body.classList.toggle("dark-mode");
 
         const darkMode = document.body.classList.contains("dark-mode");
@@ -95,6 +99,7 @@ if(themeToggle){
         localStorage.setItem("dark-mode", darkMode);
 
         themeToggle.textContent = darkMode ? "☀" : "☾";
+
     });
 
 }
