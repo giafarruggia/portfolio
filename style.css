@@ -400,6 +400,10 @@ h3{
         display:inline;
     }
 
+    .divider{
+        display:none;
+    }
+
     .calendar-gallery{
         grid-template-columns:1fr;
     }
