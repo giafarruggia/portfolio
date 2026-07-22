@@ -126,4 +126,12 @@ body{
     .subtitle .divider{
         display:none;
     }
+
+    .desktop-link{
+        display:none;
+    }
+
+    .mobile-link{
+        display:inline;
+    }
 }
