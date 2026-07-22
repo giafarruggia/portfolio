@@ -67,7 +67,7 @@ body{
     letter-spacing:.18em;
     text-transform:uppercase;
 
-    color:#666;
+    color:var(--secondary-text);
 }
 
 .bio {
@@ -258,7 +258,7 @@ a:hover{
     margin:.6rem 0 0;
     font-size:.85rem;
     text-transform:uppercase;
-    color:#999;
+    color:var(--secondary-text);
     letter-spacing:.02em;
 }
 
@@ -278,7 +278,7 @@ h3{
 
 .name-row{
     display:flex;
-    align-items:center;
+    align-items:baseline;
     gap:.75rem;
 }
 
@@ -290,10 +290,13 @@ h3{
     color:var(--text);
     padding:0;
     line-height:1;
+    transform:translateY(.1rem);
+    transition:opacity .2s ease, transform .2s ease;
 }
 
 #theme-toggle:hover{
     opacity:.6;
+    transform:translateY(.1rem) rotate(15deg);
 }
 
 .site-footer{
@@ -301,12 +304,12 @@ h3{
     padding:1.5rem 8vw;
     font-family:var(--sans-font);
     font-size:.85rem;
-    color:#999;
+    color:var(--secondary-text);
     text-transform:lowercase;
 }
 
 .site-footer a{
-    color:#999;
+    color:var(--secondary-text);
     text-decoration:none;
 }
 
