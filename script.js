@@ -95,34 +95,32 @@ if (charlieLink && lightbox && lightboxImage) {
 const themeToggle = document.getElementById("theme-toggle");
 const mobileToggle = document.getElementById("theme-toggle-mobile");
 
+function updateThemeControls() {
+    const darkMode = document.body.classList.contains("dark-mode");
+
+    if (themeToggle) {
+        themeToggle.textContent = darkMode ? "☀️" : "🌙";
+    }
+
+    if (mobileToggle) {
+        mobileToggle.checked = darkMode;
+    }
+}
+
 if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark-mode");
 }
 
-if (themeToggle) {
-    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀" : "☾";
-}
-
-if (mobileToggle) {
-    mobileToggle.checked = document.body.classList.contains("dark-mode");
-}
+updateThemeControls();
 
 function toggleTheme() {
-
     document.body.classList.toggle("dark-mode");
 
     const darkMode = document.body.classList.contains("dark-mode");
 
     localStorage.setItem("dark-mode", darkMode);
 
-    if (themeToggle) {
-        themeToggle.textContent = darkMode ? "☀" : "☾";
-    }
-
-    if (mobileToggle) {
-        mobileToggle.checked = darkMode;
-    }
-
+    updateThemeControls();
 }
 
 if (themeToggle) {
