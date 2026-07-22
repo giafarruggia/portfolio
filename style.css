@@ -59,10 +59,6 @@ body{
     color:#444;
 }
 
-.calendar-gallery{
-    grid-template-columns:repeat(2, 1fr);
-}
-
 .gallery-page .bio{
     margin-top:2.5rem;
     max-width:800px;
@@ -128,6 +124,10 @@ a:hover{
 
 .gallery img:hover{
     transform:translateY(-4px);
+}
+
+.calendar-gallery{
+    grid-template-columns:repeat(2, 1fr);
 }
 
 .lightbox{
