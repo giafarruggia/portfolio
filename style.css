@@ -25,6 +25,11 @@
     --link-hover: #ffe6e6;
 }
 
+.page{
+    max-width:1200px;
+    margin:0 auto;
+}
+
 body{
     margin:0;
     font-family:var(--sans-font);
@@ -42,7 +47,7 @@ b {
     display:flex;
     align-items:flex-start;
     justify-content:space-between;
-    gap:3rem;
+    gap:2rem;
 }
 
 .intro h1{
@@ -168,7 +173,7 @@ a:hover{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:2rem;
     padding:1.5rem 8vw 5rem;
 }
@@ -444,6 +449,10 @@ h3{
 
     .divider{
         display:none;
+    }
+
+    .grid{
+    grid-template-columns:1fr;
     }
 
     .calendar-gallery{
