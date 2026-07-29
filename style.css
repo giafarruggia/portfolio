@@ -25,13 +25,6 @@
     --link-hover: #ffe6e6;
 }
 
-.page{
-    max-width:1300px;
-    margin:0 auto;
-    padding:0 2rem;
-    box-sizing:border-box;
-}
-
 body{
     margin:0;
     font-family:var(--sans-font);
@@ -45,11 +38,11 @@ b {
 }
 
 .intro{
-    padding:5rem 0 1rem;
+    padding:5rem 8vw 1rem;
     display:flex;
     align-items:flex-start;
     justify-content:space-between;
-    gap:2rem;
+    gap:3rem;
 }
 
 .intro h1{
@@ -167,11 +160,7 @@ a:hover{
     white-space: nowrap;
 }
 
-.nav-inner {
-    max-width:1300px;
-    margin:0 auto;
-    padding:0 2rem;
-    box-sizing:border-box;
+.homepage-nav {
     display:grid;
     grid-template-columns:repeat(4, 1fr);
     text-align:center;
@@ -179,16 +168,16 @@ a:hover{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:2rem;
-    padding:1.5rem 0 5rem;
+    padding:1.5rem 8vw 5rem;
 }
 
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap:2rem;
-    padding:1.5rem 0 5rem;
+    padding:1.5rem 8vw 5rem;
 }
 
 .gallery img{
@@ -380,7 +369,7 @@ h3{
 
 .site-footer{
     text-align:center;
-    padding:1.5rem 0;
+    padding:1.5rem 8vw;
     font-family:var(--sans-font);
     font-size:.85rem;
     color:var(--secondary-text);
@@ -455,10 +444,6 @@ h3{
 
     .divider{
         display:none;
-    }
-
-    .grid{
-    grid-template-columns:1fr;
     }
 
     .calendar-gallery{
