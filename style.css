@@ -140,16 +140,12 @@ a:hover{
     opacity:.7;
 }
 
-.gallery-nav {
-    width:1200px;
-    max-width:calc(100% - 40px);
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
-    align-items:center;
-    padding:.75rem 0;
-    column-gap:3rem;
-    box-sizing:border-box;
+.gallery-nav { display: grid;
+              grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+              align-items: center;
+              padding: .75rem 8vw;
+              column-gap: 3rem;
+             
 }
 
 .gallery-nav .nav-left {
